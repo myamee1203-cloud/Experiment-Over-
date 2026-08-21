@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://7fx6bmxs75yy"]
+
+[ext_resource type="Texture2D" uid="uid://cfxkw4ty27slw" path="res://애셋/걷기_1.png" id="1_krj17"]
+[ext_resource type="Texture2D" uid="uid://cwwjeyvtojp11" path="res://애셋/걷기_2.png" id="2_6ry83"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7e5sw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_krj17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_6ry83")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7e5sw"]
+radius = 251.00797
+
+[node name="플레이어" type="CharacterBody2D" unique_id=1363538447]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=272760753]
+position = Vector2(0, -400)
+sprite_frames = SubResource("SpriteFrames_7e5sw")
+autoplay = "default"
+frame_progress = 0.11352025
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1378290839]
+position = Vector2(0, -369)
+shape = SubResource("CircleShape2D_7e5sw")

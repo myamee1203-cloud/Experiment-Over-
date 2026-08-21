@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cnmmwj52kpab4"]
+
+[ext_resource type="Texture2D" uid="uid://cas12fjek4f2u" path="res://애셋/바닥 타일 (임시).jpg" id="1_646yr"]
+
+[node name="타일셋" type="Sprite2D" unique_id=671056132]
+texture = ExtResource("1_646yr")

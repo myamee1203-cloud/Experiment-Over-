@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://7jcu2jlv2ol4"]
+
+[ext_resource type="Script" uid="uid://dhpshpma3biht" path="res://스크립트/아이템.gd" id="1_3w6t4"]
+[ext_resource type="Texture2D" uid="uid://b3750vevrhtn" path="res://애셋/멍멍이.png" id="1_w0na8"]
+[ext_resource type="Texture2D" uid="uid://cfj4djle50ioh" path="res://애셋/멍멍이_2.png" id="2_3w6t4"]
+[ext_resource type="Texture2D" uid="uid://cxvssr2xrtrnn" path="res://애셋/멍멍이_3.png" id="3_a2vor"]
+[ext_resource type="Texture2D" uid="uid://borj2m3gxal3r" path="res://애셋/멍멍이_4.png" id="4_abbgy"]
+[ext_resource type="Texture2D" uid="uid://bg86k42ddcuem" path="res://애셋/멍멍이_5.png" id="5_n4saj"]
+[ext_resource type="Texture2D" uid="uid://dsfqges6hhriw" path="res://애셋/멍멍이_6.png" id="6_ttkvi"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i6c4x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_w0na8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_3w6t4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a2vor")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_abbgy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_n4saj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_ttkvi")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uqukg"]
+radius = 299.99997
+
+[node name="아이템" type="Area2D" unique_id=186451260]
+script = ExtResource("1_3w6t4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2028296146]
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_i6c4x")
+autoplay = "default"
+frame = 1
+frame_progress = 0.86254805
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=178638574]
+scale = Vector2(0.1, 0.1)
+shape = SubResource("CircleShape2D_uqukg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

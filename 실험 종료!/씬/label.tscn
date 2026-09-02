@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ckpautrdvotqr"]
+
+[node name="Label" type="Label" unique_id=1003391590]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "현재 스코아"

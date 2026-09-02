@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://7fx6bmxs75yy" path="res://씬/플레이어.tscn" id="1_y48e0"]
 [ext_resource type="Texture2D" uid="uid://cas12fjek4f2u" path="res://애셋/바닥 타일 (임시).jpg" id="2_usou7"]
 [ext_resource type="Script" uid="uid://bkbuw46kh3a1u" path="res://스크립트/플레이어.gd" id="2_xt5jy"]
+[ext_resource type="PackedScene" uid="uid://7jcu2jlv2ol4" path="res://씬/아이템.tscn" id="4_d8hdd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xt5jy"]
 texture = ExtResource("2_usou7")
@@ -6588,5 +6589,8 @@ rotation_smoothing_enabled = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=723682437]
 scale = Vector2(0.1, 0.1)
-tile_map_data = PackedByteArray("AAD///7/AAAAAAAAAAD/////AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAP//AAAAAAAAAAABAP7/AAAAAAAAAAAAAP7/AAAAAAAAAAAAAP//AAAAAAAAAAD+//7/AAAAAAAAAAD+////AAAAAAAAAAD+/wAAAAAAAAAAAAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD///7/AAAAAAAAAAD/////AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAABAP//AAAAAAAAAAABAP7/AAAAAAAAAAAAAP7/AAAAAAAAAAAAAP//AAAAAAAAAAD+//7/AAAAAAAAAAD+////AAAAAAAAAAD+/wAAAAAAAAAAAAD+/wEAAAAAAAAAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAD9//7/AAAAAAAAAAD9////AAAAAAAAAAD9/wAAAAAAAAAAAAD9/wEAAAAAAAAAAAA=")
 tile_set = SubResource("TileSet_7e5sw")
+
+[node name="아이템2" parent="." unique_id=186451260 instance=ExtResource("4_d8hdd")]
+position = Vector2(-104, 71)
